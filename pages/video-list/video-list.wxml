@@ -1,0 +1,9 @@
+<view class="v-list">
+    <view class="v-item" wx:for="{{videoList}}" wx:key="index" bindtap="playVideo" data-sid="{{item.sid}}">
+        <view class="v-img">
+            <image mode="aspectFill" src="{{item.thumbnail}}"
+            binderror="imgError" data-errorimg="{{index}}"></image>
+        </view>
+        <view class="v-text">{{item.text}}</view>
+    </view>
+</view>

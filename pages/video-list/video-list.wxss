@@ -1,0 +1,19 @@
+.v-list {
+  margin: 0 40rpx;
+}
+.v-list .v-item {
+  margin: 40rpx 0;
+}
+.v-list .v-item .v-img image {
+  width: 100%;
+}
+.v-list .v-item .v-text {
+  text-indent: 1em;
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.v-list .v-item .v-text::first-letter {
+  color: #1296db;
+}

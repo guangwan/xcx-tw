@@ -1,0 +1,8 @@
+.video-box {
+  width: 100%;
+}
+.text {
+  text-indent: 2em;
+  padding: 20rpx 40rpx 0 40rpx;
+  font-size: 28rpx;
+}

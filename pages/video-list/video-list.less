@@ -1,0 +1,27 @@
+.v-list{
+    margin: 0 40rpx;
+    // display: flex;
+    // flex-wrap: wrap;
+    // .v-item{
+    //     width: 48%;
+    // }
+    // .v-item:nth-child(2n-1){
+    //     margin-right: 4%;
+    // }
+    .v-item{
+        margin: 40rpx 0;
+        .v-img image{
+            width: 100%;
+        }
+        .v-text{
+            text-indent: 1em;
+            font-size: 28rpx;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            &::first-letter{
+                color: #1296db;
+            }
+        }
+    }
+}

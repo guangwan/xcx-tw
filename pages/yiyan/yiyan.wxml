@@ -1,0 +1,11 @@
+<view class="y-type">
+    <view class="y-item {{item.type == type ? 'on' : ''}}" wx:for="{{menu}}" wx:key="index" data-type="{{item.type}}" bindtap="chooseType">{{item.typeName}}</view>
+</view>
+<view class="y-text">
+    <view class="y-y">
+        <text selectable='true'>{{yiYan.hitokoto || yiYan}}</text>
+    </view>
+    <view class="y-from">来自——{{yiYan.from || "网络"}}</view>
+</view>
+<view class="y-change" bindtap="getYiYan">换一换</view>
+<view class="copy" bindtap="copy">一键复制</view>

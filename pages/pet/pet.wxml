@@ -1,0 +1,18 @@
+
+<view class="head">
+    <view class="y-type">
+        <view class="y-item {{item.type == type ? 'on' : ''}}" wx:for="{{menu}}" wx:key="index" data-type="{{item.type}}" bindtap="chooseType">{{item.typeName}}</view>
+    </view>
+</view>
+
+<view class="img-box">
+    <image src="{{imgUrl}}" binderror="imgerror" mode="aspectFit" data-url="{{imgUrl}}" bindtap="downloadImg"></image>
+</view>
+<view class="y-change" bindtap="getImg">换一换</view>
+
+<!-- <view class="p-list" wx:if="{{imgList}}">
+    <view class="p-item" wx:for="{{imgList}}" wx:key="index"> 
+        <image mode="aspectFill" src="{{item.imageUrl}}" binderror="imgError" bindtap="downloadImg" data-url="{{item.imageUrl}}"></image>
+    </view>
+</view> -->
+

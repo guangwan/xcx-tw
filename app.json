@@ -1,0 +1,45 @@
+{
+    "pages": [
+        "pages/yiyan/yiyan",
+        "pages/pet/pet",
+        "pages/logs/logs",
+        "pages/weather/weather"
+    ],
+    "tabBar": {
+        "color": "#515151",
+        "selectedColor": "#1296db",
+        "backgroundColor": "#fff",
+        "list": [{
+                "pagePath": "pages/yiyan/yiyan",
+                "text": "简言",
+                "iconPath": "assets/yiyan.png",
+                "selectedIconPath": "assets/yiyan-on.png"
+            },
+            {
+                "pagePath": "pages/pet/pet",
+                "text": "美图",
+                "iconPath": "assets/pet.png",
+                "selectedIconPath": "assets/pet-on.png"
+            },
+            {
+                "pagePath": "pages/weather/weather",
+                "text": "天气",
+                "iconPath": "assets/weather.png",
+                "selectedIconPath": "assets/weather-on.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序获取你当前城市天气信息" 
+        }
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

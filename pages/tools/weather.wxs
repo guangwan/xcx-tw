@@ -1,0 +1,8 @@
+function strSlice(str) {
+    if(str){
+        return str.slice(11)
+    }
+}
+module.exports = {
+    strSlice:strSlice
+}

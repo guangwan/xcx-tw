@@ -1,0 +1,57 @@
+<wxs src="../tools/weather.wxs" module="tools" />
+<view class="section">
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+            <image mode="aspectFit" class="icon1" src="../../assets/icon1.png" alt=""></image>
+            <text>{{street || region[2]}}</text>
+            <image class="icon2" src="../../assets/icon2.png" alt=""></image>
+        </view>
+    </picker>
+</view>
+<view class="todayWeather">今日天气情况</view>
+<view wx:if="{{weatherDetail}}" class="detail">   
+    <view class="temp">{{weatherDetail.temp}}</view>
+    <view class="weather">{{weatherDetail.weather}}</view>
+    <view class="desc">
+        <text>湿度 {{weatherDetail.humidity}}</text>
+        <text>风力 {{weatherDetail.windPower}}</text>
+        <text>风向 {{weatherDetail.windDirection}}</text>
+    </view>
+    <view class="reportTime">发布时间 {{tools.strSlice(weatherDetail.reportTime)}}</view>
+</view>
+
+<view class="forecastWeather">未来天气情况</view>
+<view class="scroll-box" wx:if="{{weatherDetail}}">
+    <view class="tag">
+        <view>日期</view>
+        <view>时间</view>
+        <view>天气</view>
+        <view>气温</view>
+        <view>风力</view>
+    </view>
+    <scroll-view class="forecast" scroll-x="true" enable-flex="true">
+        <view class="f-item" wx:for="{{forecastWeather}}" wx:key="index">
+            <view class="date">{{item.date}}</view>
+            <view class="item">
+
+                <text>白天</text>
+                <text>夜晚</text>
+            </view>
+            <view class="item">
+                <!-- <text>天气</text> -->
+                <text>{{item.dayWeather}}</text>
+                <text>{{item.nightWeather}}</text>
+            </view>
+            <view class="item">
+                <!-- <text>气温</text> -->
+                <text>{{item.dayTemp}}</text>
+                <text>{{item.nightTemp}}</text>
+            </view>
+            <view class="item">
+                <!-- <text>风力</text> -->
+                <text>{{item.dayWindPower}}</text>
+                <text>{{item.nightWindPower}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,13 @@
+<view>
+    <video id="myVideo" class="video-box"
+    src="{{videoDetail.video}}"
+    controls="{{true}}"
+    autoplay="{{true}}"
+    danmu-btn="true"
+    danmu-list="{{danmuList}}"
+    enable-danmu="true"
+    >
+    </video>
+</view>
+<view class="text">{{videoDetail.text}}</view>
+
